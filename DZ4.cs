@@ -11,15 +11,23 @@
 // Console.WriteLine($"Число {foundation} в степени {power} = {result}");
 
 // 27. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе
-Console.Write("Введите число: ");
-int userNumber = Convert.ToInt32(Console.ReadLine());
-int copyNumber = userNumber;
-int sumDigital = 0;
-while (userNumber > 0)
-{
-    sumDigital = sumDigital + (userNumber % 10);
-    userNumber /= 10;
-}
-Console.WriteLine($"Сумма цифр в числе {copyNumber} равна {sumDigital}");
+// Console.Write("Введите число: ");
+// int userNumber = Convert.ToInt32(Console.ReadLine());
+// int copyNumber = userNumber;
+// int sumDigital = 0;
+// while (userNumber > 0)
+// {
+//     sumDigital = sumDigital + (userNumber % 10);
+//     userNumber /= 10;
+// }
+// Console.WriteLine($"Сумма цифр в числе {copyNumber} равна {sumDigital}");
 
 // 29. Напишите программу, которая задаёт массив из 8 элементов в диапазоне от 10 до 1000 и выводит их на экран. Или массив из 8 элементов вводится с консоли (каждый элемент вводит человек)
+int size = 8;
+string[] userArray = new string[size];
+for (int i = 0; i < userArray.Length; i++)
+{
+    Console.WriteLine($"Введите {i} элемент массива");
+    userArray [i] = Console.ReadLine();
+}
+Console.WriteLine($"Массив: [ {string.Join("; ", userArray)} ]");
